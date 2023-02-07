@@ -3,9 +3,8 @@
         <title>
             Javascript Injection Method
             <!--
-                Author: 
-                Version: 
-                License: 
+                Author: Neural Binary
+                Version: v1.0.0
             -->
         </title>
     </head>
@@ -31,9 +30,10 @@
             }, 1000);
         }
 
-       Inject("https://raw.githubusercontent.com/NeuralBinary/Javascript-Injection-Example/main/script.txt?token=GHSAT0AAAAAAB6JFOO7QTXLLRR6P3H4B65OY7CZ7GQ");
+        // Working remote text file to executable javascript file.
+        Inject("https://raw.githubusercontent.com/NeuralBinary/Javascript-Injection-Example/main/script.txt?token=GHSAT0AAAAAAB6JFOO7QTXLLRR6P3H4B65OY7CZ7GQ");
 
-       function Inject(data) {
+        function Inject(data) {
             var request = new XMLHttpRequest();
             request.onload = function(err) {
                 if (err) { console.log(err); }
