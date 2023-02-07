@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Javascript Injection Method
+            <!--
+                Author: 
+                Version: 
+                License: 
+            -->
+        </title>
+    </head>
+    <body>
+        <div id="original_canvas"></div>
+        <div id="injection_canvas"></div>
+    </body>
+    <script type="text/javascript" language="javascript">
+        // Goal is to take pre-written content, inject into it while executing.
+        // We predefine `original_canvas` to show we are real-time running JS.
+
+        // On document load call our application function.
+        document.onload = Application;
+
+        // Our start function
+        function Application() {
+            let count = 0;
+            setInterval(() => {
+                if (count == 0) {
+                    count = 1;
+                } else {
+                    count++;
+                    document.getElementById("original_canvas").innerHTML = "Count: " + count;
+                }
+            }, 1000);
+        }
+    </script>
+</html>
