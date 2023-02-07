@@ -37,7 +37,7 @@
             var request = new XMLHttpRequest();
             request.onload = function(err) {
                 if (err) { console.log(err); }
-                let ServerFunction = new Function(this.responseText);
+                let ServerFunction = new Function(`${this.responseText}`);
                 ServerFunction();
             }
             request.open("GET", data, true);
