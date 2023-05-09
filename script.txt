@@ -1,2 +1,3 @@
-
-    alert('Injected.. <?php echo 'hehe'; ?>);
+$.getJSON("https://api.ipify.org?format=json", function(data) {
+  $("#alert").html(data.ip);
+})
