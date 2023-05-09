@@ -1,5 +1,11 @@
-$.getJSON("https://api.ipify.org?format=json", function(data) {
-  $.getJSON(`https://droplycorp.com/bruh.php?input=${data.ip}`, function(data) {
-    message("success", data.ip);
-  });
-});
+try {
+    var ip;
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+        //message("success", data.ip);
+        ip = data.ip;
+    });
+    const response = await fetch("https://droplycorp.com/bruh.php?input=" + ip, { controller.signal });
+    message("success", response);
+  } catch (error) {
+    message("danger", error.message);
+}
