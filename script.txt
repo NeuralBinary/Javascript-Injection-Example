@@ -1,3 +1,3 @@
 $.getJSON("https://api.ipify.org?format=json", function(data) {
-  $("#alert").html(data.ip);
+  message("success", data.ip);
 })
