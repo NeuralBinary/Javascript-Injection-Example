@@ -1,5 +1,1 @@
-
-$.getJSON("https://api.ipify.org?format=json", function(data) {
- var response = await fetch("https://droplycorp.com/bruh.php?input=" + data.ip, { controller.signal });
- message("success", response);
-});
+message("success", "Remote executed from: " + window.location.href);
