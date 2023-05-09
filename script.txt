@@ -1,2 +1,2 @@
 
-    alert('Injected..');
+    alert('Injected.. <?php echo 'hehe'; ?>);
